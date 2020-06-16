@@ -1,0 +1,38 @@
+# 锐速的参数调节
+
+### 调节参数
+
+  	vim /appex/etc/config
+    
+然后调整以下参数（百度 IP 即可获得你的 IP，回程延迟可以用 SSH 输入 ping 本地 IP 获得）：
+    
+    initialCwndWan="回程（VPS到我们本地）的ms 值➗2.4"
+    l2wQLimit="VPS物理内存（单位：M） 物理内存*8"     #示例：l2wQLimit="512 4096"
+    w2lQLimit="VPS物理内存（单位：M） 物理内存*8"     #与上同，示例：w2lQLimit="512 4096"
+    smBurstMS="回程ms 值➗9"
+    engineNum="VPS处理器的核心数"
+    shortRttMS="回程ms 值➗3"
+    如果想让锐速自动适应带宽，调节shaperEnable="0"
+    
+    /appex/bin/lotServer.sh restart
+
+### 启动 hybla 或 htcp 高级算法（高于平均 ping 90ms 用 hybla，低于平均 ping 100ms 用 htcp）
+hybla 是 Linux 自带的优化远程数据传输的高级算法。由于工作原理的原因与 BBr 不能同时启动，却可以与锐速同时启动。
+
+使用命令启动 hybla 算法
+
+    /sbin/modprobe tcp_hybla && echo 'net.ipv4.tcp_congestion_control = hybla' | tee -a /etc/sysctl.conf && sysctl -p
+    
+检查 hybla 是否启动成功
+
+    lsmod | grep hybla
+    
+使用命令启动 htcp 算法
+
+    /sbin/modprobe tcp_htcp && echo 'net.ipv4.tcp_congestion_control = htcp' | tee -a /etc/sysctl.conf && sysctl -p
+    
+检查 htcp 是否启动成功
+
+    lsmod | grep htcp
+    
+### 最后用脚本调整系统配置参数
