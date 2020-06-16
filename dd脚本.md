@@ -9,9 +9,9 @@ wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com
 ```
 ## 脚本使用命令
 ```
-bash InstallNET.sh -c 6.9 -v 64 -a --mirror 'http://mirror.centos.org/centos'
-//-c centos 
-//6.9 版本号
+bash InstallNET.sh -u 18.04 -v 64 -a --mirror 'http://mirror.centos.org/centos'
+//-u ubuntu 
+//18.04 版本号
 //换上自定义的镜像url
 ```
 ## 全自动安装默认root密码:```MoeClub.org```
