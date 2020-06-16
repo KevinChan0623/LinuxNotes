@@ -1,6 +1,7 @@
 ## 镜像源
 ```
-阿里 https://mirrors.aliyun.com/ubuntu-releases/
+阿里镜像站 https://developer.aliyun.com/mirror/
+阿里ubuntu https://mirrors.aliyun.com/ubuntu-releases/
 ```
 ---
 ## dd脚本安装
