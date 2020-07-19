@@ -7,7 +7,7 @@
 ```
 ## dd脚本安装
 ```
-wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/veip007/dd/master/InstallNET.sh' && chmod +x InstallNET.sh
+wget --no-check-certificate -qO InstallNET.sh 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh'
 ```
 ## 脚本使用命令
 ```
