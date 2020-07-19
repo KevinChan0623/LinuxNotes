@@ -11,10 +11,9 @@ wget --no-check-certificate -qO InstallNET.sh 'https://moeclub.org/attachment/Li
 ```
 ## 脚本使用命令
 ```
-bash InstallNET.sh -u 18.04 -v 64 -a -apt 'http://mirrors.aliyun.com' --mirror 'http://mirror.centos.org/centos'
+bash InstallNET.sh -u 18.04 -v 64 -a --mirror 'http://mirror.centos.org/centos'
 //-u ubuntu 
 //18.04 版本号
-//-apt/-yum apt/yum源
 //换上自定义的镜像url
 ```
 ## 全自动安装默认root密码:```MoeClub.org```
