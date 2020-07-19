@@ -2,6 +2,8 @@
 ```
 阿里镜像站 https://developer.aliyun.com/mirror/
 阿里ubuntu https://mirrors.aliyun.com/ubuntu-releases/
+腾讯ubuntu apt源 https://mirrors.cloud.tencent.com/help/ubuntu.html
+腾讯ubuntu https://mirrors.cloud.tencent.com/ubuntu-releases/
 ```
 ## dd脚本安装
 ```
